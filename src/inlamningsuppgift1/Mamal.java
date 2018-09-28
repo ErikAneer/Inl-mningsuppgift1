@@ -9,4 +9,7 @@ package inlamningsuppgift1;
  */
 abstract class Mamal extends Pet{
     
+    public Mamal(String name, int weight){
+        super (name, weight);
+    }
 }

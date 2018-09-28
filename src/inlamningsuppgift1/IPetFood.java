@@ -9,6 +9,6 @@ package inlamningsuppgift1;
  */
 public interface IPetFood {
     
-    public int getPetFoodToGive();
+    public void printPetFoodToGive();
      
 }
