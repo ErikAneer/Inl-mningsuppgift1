@@ -1,26 +1,28 @@
 /*
- * Javautveckling 2018
+ * Java 2018
  */
 package inlamningsuppgift1;
+
+import javax.swing.*;
 
 /**
  *
  * @author Erik Aneer
  */
-public class Dog extends Mamal implements IPetFood{
+public class Dog extends Mamal{
     
     public Dog(String name, int weight){
         super (name, weight);
     }
     
-    @Override
+    @Override   // Användning av polymorfism i instansmetod.
     public void printPet(){
-        System.out.println("Hunden " + this.getPetName() 
+         JOptionPane.showMessageDialog(null, "Hunden " + this.getPetName() 
                 + " väger " + this.getPetWeight() + " kg.");
     }
-    @Override
+    @Override  // Användning av polymorfism i interfacemetod.
     public void printPetFoodToGive(){
-        System.out.println("Hunden " + this.getPetName()+ " ska få " 
+         JOptionPane.showMessageDialog(null,  "Hunden " + this.getPetName()+ " ska få " 
                 + (this.getPetWeight()*1000)/100 + " gram hundfoder.");
     }
 }

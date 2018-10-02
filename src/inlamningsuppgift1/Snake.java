@@ -3,24 +3,25 @@
  */
 package inlamningsuppgift1;
 
+import javax.swing.*;
 /**
  *
  * @author Erik Aneer
  */
-public class Snake extends Reptile implements IPetFood {
+public class Snake extends Reptile {
     
     public Snake(String name, int weight){
         super (name, weight);
     }
     
-    @Override   // Användning av polymorfism
+    @Override    // Användning av polymorfism i instansmetod.
     public void printPet(){
-        System.out.println("Ormen " + this.getPetName() 
+         JOptionPane.showMessageDialog(null,"Ormen " + this.getPetName() 
                 + " väger " + this.getPetWeight() + " kg.");
     }
-    @Override
+    @Override   // Användning av polymorfism i interfacemetod.
     public void printPetFoodToGive(){
-        System.out.println("Ormen " + this.getPetName()
+        JOptionPane.showMessageDialog(null,"Ormen " + this.getPetName()
                 + " ska få 20 gram ormpellets.");
     }
 }
