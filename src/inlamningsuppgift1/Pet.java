@@ -5,9 +5,9 @@ import javax.swing.*;
 
 abstract class Pet implements IPetFood{
     
-         protected String name;   
-         protected int weight;        
-         public PetFoodType food;
+         private String name;   // Inkapsling av instansvariabler.(skydda genom åtkomstdirektiv och get-metoder nedan).
+         private int weight;        
+         protected PetFoodType food; // Satt till protected föratt kunna komma åt djuerfoder-variabeln.
 
          public enum PetFoodType {
                   CATFOOD ("kattfoder"), DOGFOOD("hundfoder"), SNAKEFOOD("ormpellets");
@@ -17,7 +17,7 @@ abstract class Pet implements IPetFood{
                   PetFoodType(String foodType){
                            this.foodType = foodType;
                   }
-                  public String getPetFoodType(){
+                  public String getPetFoodType(){ // Inkapsling, get-metod för att komma åt  djuerfoder-variabeln.
                            return foodType;
                   }
          }
@@ -27,16 +27,11 @@ abstract class Pet implements IPetFood{
                   this.weight = weight; 
          }
          
-         public String getPetName(){ 
+         public String getPetName(){ // Inkapsling, get-metod för att komma åt instansvariabel.
                   return name;
          }
 
-         public int getPetWeight(){ 
+         public int getPetWeight(){ // Inkapsling, get-metod för att komma åt instansvariabel.
                   return weight;
         }
-
-         public void printPet(){
-                  JOptionPane.showMessageDialog(null,this.getPetName()
-                                           + " väger " + this.getPetWeight() + " kg.");
-         } 
 }

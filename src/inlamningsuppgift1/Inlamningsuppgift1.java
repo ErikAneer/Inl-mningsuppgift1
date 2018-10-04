@@ -22,7 +22,7 @@ public class Inlamningsuppgift1 {
              
                   Pet petToFeed = HelpingMethod.askUserForPetName(healthyPets);
 
-                   petToFeed.printPetFoodToGive();
+                   petToFeed.printPetFoodToGive(); // Användning av polymorfism då metoden käner av vilken typ av "pet" det är.
          }
     }
 }  

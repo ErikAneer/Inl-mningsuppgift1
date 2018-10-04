@@ -10,15 +10,9 @@ public class Dog extends Mammal{
                   this.food = food.DOGFOOD;
          }
     
-         @Override   // Användning av polymorfism i instansmetod.
-         public void printPet(){
-         JOptionPane.showMessageDialog(null, "Hunden " + this.getPetName() 
-                                                       + " väger " + this.getPetWeight() + " kg.");
-         }
-    
          @Override  // Användning av polymorfism i interfacemetod.
          public void printPetFoodToGive(){
-         JOptionPane.showMessageDialog(null,  "Hunden " + this.getPetName()+ " ska få " 
-                    + (this.getPetWeight()*1000)/100 +" gram " + food.getPetFoodType() + ".");
+         JOptionPane.showMessageDialog(null,  "Hunden " + getPetName()+ " ska få " 
+                    + (getPetWeight()*1000)/100 +" gram " + food.getPetFoodType() + ".");
          }
 }

@@ -10,15 +10,9 @@ public class Cat extends Mammal{
                   this.food = food.CATFOOD; 
          }
     
-         @Override   // Användning av polymorfism i instansmetod.
-         public void printPet(){
-         JOptionPane.showMessageDialog(null,"Katten " + this.getPetName() 
-                                                    + " väger " + this.getPetWeight() + " kg.");
-         }
-    
          @Override // Användning av polymorfism i interfacemetod.
          public void printPetFoodToGive(){ 
-         JOptionPane.showMessageDialog(null, "Katten " + this.getPetName()+ " ska få " 
-                + (this.getPetWeight()*1000)/150 + " gram " + food.getPetFoodType() + ".");
+         JOptionPane.showMessageDialog(null, "Katten " +getPetName()+ " ska få " 
+                + (getPetWeight()*1000)/150 + " gram " + food.getPetFoodType() + ".");
          }
 }
