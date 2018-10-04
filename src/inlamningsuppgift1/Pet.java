@@ -7,7 +7,7 @@ abstract class Pet implements IPetFood{
     
          private String name;   // Inkapsling av instansvariabler.(skydda genom åtkomstdirektiv och get-metoder nedan).
          private int weight;        
-         protected PetFoodType food; // Satt till protected föratt kunna komma åt djuerfoder-variabeln.
+         protected PetFoodType food; // Satt till protected föratt kunna komma åt djurfoder-variabeln.
 
          public enum PetFoodType {
                   CATFOOD ("kattfoder"), DOGFOOD("hundfoder"), SNAKEFOOD("ormpellets");
@@ -17,7 +17,7 @@ abstract class Pet implements IPetFood{
                   PetFoodType(String foodType){
                            this.foodType = foodType;
                   }
-                  public String getPetFoodType(){ // Inkapsling, get-metod för att komma åt  djuerfoder-variabeln.
+                  public String getPetFoodType(){ // Inkapsling, get-metod för att komma åt  djurfoder-variabeln.
                            return foodType;
                   }
          }
