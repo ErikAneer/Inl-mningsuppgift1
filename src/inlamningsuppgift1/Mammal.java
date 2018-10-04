@@ -1,9 +1,9 @@
 
 package inlamningsuppgift1;
 
-abstract class Reptile extends Pet {
+abstract class Mammal extends Pet{
     
-         public Reptile(String name, int weight){
+         public Mammal(String name, int weight){
                   super (name, weight);
          }
 }
